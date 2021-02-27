@@ -1,5 +1,5 @@
 import Header from './components/Header'
-import Task from './components/Task'
+import Tasks from './components/Tasks'
 import React, { useState, useEffect } from 'react'
 
 function App() {
@@ -18,10 +18,16 @@ function App() {
     }
 
 ])
+
+const deleteTask = (id) => {
+  setTasks(tasks.filter((task) => {
+    return task.id !== id
+  }))
+}
   return (
     <div className="container">
      <Header />
-     <Task tasks={tasks}/>
+     {tasks.length > 0 ? (<Tasks tasks={tasks} onDelete={deleteTask}/>) : ('Nothing')}
     </div>
   );
 }
