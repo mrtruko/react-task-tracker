@@ -7,8 +7,6 @@ function App() {
     </div>
   );
 }
-Header.defaultProps = {
-  title: 'Task Tracker'
-}
+
 
 export default App;

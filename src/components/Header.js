@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types'
 
 const Header = ({title}) => {
     return (
@@ -7,5 +7,11 @@ const Header = ({title}) => {
         </header>
     )
 }
+
+Header.defaultProps = {
+    title: 'Task Tracker'
+}
+
+
 
 export default Header
